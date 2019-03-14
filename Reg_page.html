@@ -20,42 +20,83 @@
 		<span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarText">
+		<!--
 		<ul class="navbar-nav mr-auto">
 		 <li class="nav-item">
 			<a class="nav-link" href="login.html">Login Page</a>
 		  </li>
 		</ul>
+		-->
 	  </div>
 	</nav>
 	<br>
 	<div class="container">
 		<form action="home.html">
 			<div class="form-group row">
+
 				<label  for="fullName"> <b>Enter Your Full Name:</b></label>
 				<br>
 				<br>
-				<div class="col-sm-10">
+				<div class="col-sm-8">
 					<input type="text" class="form-control" name="fullName" id="fullName"  placeholder="Ex. Johnny Appleseed">
 				</div>
 			</div>
 			<div class="form-group row">
-				<label  for="emailAddress"><b>Colorado Email address:</b></label>
-				<div class="col-sm-10">
+				<label  for="emailAddress"><b>Enter your Username:</b></label>
+				<div class="col-sm-8">
 					<input type="email" class="form-control" name="emailAddress" id="emailAddress" placeholder="example@colorado.edu">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label for="passwordFirst"><b>Enter your Password:</b></label>
-				<div class="col-sm-10">
+				<div class="col-sm-8">
 					<input type="password" class="form-control" id="passwordFirst" name="passwordFirst" placeholder="Password">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label for="passwordConfirm"><b>Confirm Password:</b></label>
-				<div class="col-sm-10">
+				<div class="col-sm-8">
 					<input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Confirm Password">
 				</div>
 			</div>
+			
+			<div class="form-group row">
+				<label for="personalityInput"><b>Describe your Study Habits:</b></label>
+				<div class="col-sm-5">
+					<input type="personality" class="form-control" id="personality" name="personality" placeholder="Ex: Listens to music, takes frequent breaks">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="interestsInput"><b>List your Interests:</b></label>
+				<div class="col-sm-5">
+					<input type="interests" class="form-control" id="interestsInput" name="interestsInput" placeholder="Ex: drawing, hiking">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="majorInput"><b>Enter your major:</b></label>
+				<div class="col-sm-8">
+					<input type="major" class="form-control" id="majorInput" name="majorInput" placeholder="Major">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="gradDateInput"><b>Enter your Graduation Date:</b></label>
+				<div class="col-sm-5">
+					<input type="gradDate" class="form-control" id="gradDateInput" name="gradDateInput" placeholder="Ex: 2020">
+				</div>
+			</div>
+			<div class="form-group row">
+					<label for="classInput"><b>Select your Classes:</b></label>
+					<div class="col-sm-5">
+						<select class="custom select">
+							<option selected>Select your classes you're enrolled in</option>
+							<option value="1">CSCI 3308</option>
+							<option value="2">CSCI 2270</option>
+							<option value="3">CSCI 1300</option>
+						</select>
+					</div>
+				</div>
+
+
 			<input type="submit" value="submit" class="btn btn-primary btn-block">
 		</form>
 		<br>
