@@ -1,0 +1,41 @@
+sudo -u postgres psql
+
+(you will be asked for your password)
+
+create database meetnwork_db;		
+
+\c database meetnwork_db;		/* connect to database */
+
+CREATE TABLE IF NOT EXISTS login_table (
+  user_name VARCHAR(30) PRIMARY KEY,
+  user_email VARCHAR(100) NOT NULL,
+  user_password VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS class_table(
+  class_id SERIAL PRIMARY KEY,
+  class_name VARCHAR(100) NOT NULL,
+  professor_name VARCHAR(100) NOT NULL,
+  enrolled_students INT[]
+);
+
+/* year is grade level freshman, sophomore, junior OR senior */
+/* status indicates whether a user is online or not */
+/* user name is foriegn key off login_table */
+
+CREATE TABLE IF NOT EXISTS user_table (
+	user_id SERIAL PRIMARY KEY,
+	first_name VARCHAR(30) NOT NULL,
+	last_name VARCHAR (40) NOT NULL,
+	major VARCHAR(40) NOT NULL,
+	year VARCHAR(15) NOT NULL,
+	classes INT[],
+	status BOOLEAN NOT NULL,
+	user_name VARCHAR(30)
+);
+
+INSERT INTO class_table(class_name, professor_name, enrolled_students)
+VALUES ('Software Development', 'Alan Paradise', ARRAY[]::integer[]),
+('Linear Algebra', 'Rebecca Morrison', ARRAY[]::integer[]),
+('Critical Thinking', 'Garrett Bredeson', ARRAY[]::integer[]);
+
