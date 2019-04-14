@@ -19,5 +19,28 @@ h1 {
 	padding: 10px;
 	background-color: #343A40;
 }
+/*
+label[for="form-check-label"] {
+	display: inline-block;
+	float: left;
+	clear: left;
+	
+}
 
+input.form-check-input {
+	display: grid;
+	grid-column-start: 1;
+}
+*/
 
+.button {
+	margin: 0px;
+	width:150px;
+	align-items: center;
+	padding: 5px;
+	position: absolute;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%,0);
+
+}
