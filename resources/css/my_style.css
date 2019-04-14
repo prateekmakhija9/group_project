@@ -12,6 +12,10 @@ h1 {
 	background-color: #343A40;
 }
 
+h2 {
+	margin-left: 100px;
+}
+
 .navbar {
 	
 	margin-bottom: 0px;
@@ -43,4 +47,44 @@ input.form-check-input {
 	margin-right: -50%;
 	transform: translate(-50%,0);
 
+}
+
+
+
+#class1TableMain {
+	width: 1200px;
+	margin-left: 100px;
+}
+
+#class2TableMain {
+	width: 1200px;
+	margin-left: 100px;
+}
+
+#class3TableMain {
+	width: 1200px;
+	margin-left: 100px;
+}
+
+#class4TableMain {
+	width: 1200px;
+	margin-left: 100px;
+}
+
+#tablesMain {
+	margin-left: 400px;
+}
+
+.row {
+	padding-left: 0px;
+}
+
+.container {
+	margin-top: 8px;
+	margin-left: 2px;
+}
+
+#toDoRow {
+	font-size: 30px;
+	text-align: center;
 }
