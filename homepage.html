@@ -115,11 +115,13 @@
 									<th>Name</th><td>Insert My Name</td>
 								</tr>
 								<tr>
-									<th>Work Status</th>
+									<th>
+										<div id="status">Inactive</div>
+									</th>
 									<td>
 										<label class="switch">
 											<input type="checkbox">
-											<span class="slider round"></span>
+											<span class="slider round" id="activeToggle" onclick="toggleFunction()"></span>
 										</label>
 									</td>
 								</tr>
@@ -133,25 +135,27 @@
 							<tr>
 								<div class="form-group" id="toDoRow">
 									<th>To Do</th>
-									<button id="editButton" class="btn btn-sm btn-" style="font-size:24px" onclick="onClickFunction()"> <i class="fa">&#xf044;</i></button>
+									<button id="editButton" class="btn btn-sm btn" style="font-size:24px" onclick="onClickFunction()"> <i class="fa">&#xf044;</i></button>
+									<button id="doneEditing" class="btn btn-sm btn" style="font-size: 24px" disabled onclick="onClickDone()"> <i class="fa">&#xf058;</i></button>
 								</div>
 							</tr>
 							<div class="form-group">
 								<th>Class 1</th>
-								<input type="text" class="form-control" name="class1" placeholder="Class 1 Homework" maxlength="50" disabled onclick="onClickFunction()">
+								<input type="text" class="form-control" id="class1" placeholder="" maxlength="50" disabled onclick="onClickFunction()">
 							</div>
 							<div class="form-group">
 								<th>Class 2</th>
-								<input type="text" class="form-control" name="class2" placeholder="Class 2 Homework" maxlength="50" disabled onclick="onClickFunction()">
+								<input type="text" class="form-control" id="class2" placeholder="" maxlength="50" disabled onclick="onClickFunction()">
 							</div>
 							<div class="form-group">
 								<th>Class 3</th>
-								<input type="text" class="form-control" name="class3" placeholder="Class 3 Homework" maxlength="50" disabled onclick="onClickFunction()">
+								<input type="text" class="form-control" id="class3" placeholder="" maxlength="50" disabled onclick="onClickFunction()">
 							</div>
 							<div class="form-group">
 								<th>Class 4</th>
-								<input type="text" class="form-control" name="class4" placeholder="Class 4 Homework" maxlength="50" disabled onclick="onClickFunction()">
+								<input type="text" class="form-control" id="class4" placeholder="" maxlength="50" disabled onclick="onClickFunction()">
 							</div>
+
 
 						</div>
 				</div>
@@ -249,6 +253,41 @@
 
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
+
+		<script>
+			function onClickFunction(){
+				document.getElementById("class1").disabled = false;
+				document.getElementById("class2").disabled = false;
+				document.getElementById("class3").disabled = false;
+				document.getElementById("class4").disabled = false;
+				document.getElementById("editButton").disabled = true;
+				document.getElementById("doneEditing").disabled = false;
+				document.getElementById("doneEditing").style.color = 'green';
+			}
+		</script>
+		<script>
+			function onClickDone(){
+				document.getElementById("doneEditing").disabled = true;
+				document.getElementById("editButton").disabled = false;
+				document.getElementById("doneEditing").style.color = 'gray';
+				document.getElementById("class1").disabled = true;
+				document.getElementById("class2").disabled = true;
+				document.getElementById("class3").disabled = true;
+				document.getElementById("class4").disabled = true;
+			}
+		</script>
+		<script>
+			function toggleFunction(){
+				if(document.getElementById("status").innerHTML === "Inactive"){
+					document.getElementById("status").innerHTML = "Active";	
+				}
+				else{
+					document.getElementById("status").innerHTML = "Inactive";
+				}
+
+				
+			}
+		</script>
 
 
 	</body>
