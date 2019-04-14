@@ -13,10 +13,71 @@
 		<link href="resources/css/my_style.css" rel="stylesheet" type=text/css>
 		<style>
 			h1 {background-color: #343A40}
+			.switch {
+			  position: relative;
+			  display: inline-block;
+			  width: 60px;
+			  height: 34px;
+			}
+
+			.switch input { 
+			  opacity: 0;
+			  width: 0;
+			  height: 0;
+			}
+
+			.slider {
+			  position: absolute;
+			  cursor: pointer;
+			  top: 0;
+			  left: 0;
+			  right: 0;
+			  bottom: 0;
+			  background-color: #ccc;
+			  -webkit-transition: .4s;
+			  transition: .4s;
+			}
+
+			.slider:before {
+			  position: absolute;
+			  content: "";
+			  height: 26px;
+			  width: 26px;
+			  left: 4px;
+			  bottom: 4px;
+			  background-color: white;
+			  -webkit-transition: .4s;
+			  transition: .4s;
+			}
+
+			input:checked + .slider {
+			  background-color: #CFB87C;
+			}
+
+			input:focus + .slider {
+			  box-shadow: 0 0 1px #CFB87C;
+			}
+
+			input:checked + .slider:before {
+			  -webkit-transform: translateX(26px);
+			  -ms-transform: translateX(26px);
+			  transform: translateX(26px);
+			  
+			}
+			
+			/* Rounded sliders */
+			.slider.round {
+			  border-radius: 34px;
+			}
+
+			.slider.round:before {
+			  border-radius: 50%;
+			}
+
 		</style>
 	</head>
 	<body>
-		<h1 align="center" style="color:white">MeetnWork</h1>
+		<h1 align="center" style="color:white" style="font-family: cuckoo">MeetnWork</h1>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
 			<a class="navbar-brand" href="homepage.html">
 				<img class="w3-round" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Colorado_Buffaloes_logo.svg/1200px-Colorado_Buffaloes_logo.svg.png" alt="" width="35" height="25">
@@ -48,25 +109,25 @@
 				<div class="card" id="profileSection">
 					<img class="card-img-top" src="https://www.manufacturingusa.com/sites/manufacturingusa.com/files/default.png" alt="" height="250px" width="150px">
 						<div class="container">
+
 							<table class="table table-bordered" id="profileTable">
 								<tr>
 									<th>Name</th><td>Insert My Name</td>
 								</tr>
 								<tr>
 									<th>Work Status</th>
-									<!--
 									<td>
-										<label class="switchActive">
+										<label class="switch">
 											<input type="checkbox">
-											<div class="slider round"></div>
+											<span class="slider round"></span>
 										</label>
 									</td>
-								-->
 								</tr>
 								<tr>
 									<th>Location</th><td>Insert My Location</td>
 								</tr>
 							</table>
+							
 						</div>
 						<div class="container" id="toDoContainer">
 							<tr>
@@ -95,6 +156,7 @@
 						</div>
 				</div>
 			</div>
+
 			<div class="col-8">
 				<table class="table table-hover" id="class1TableMain">
 					<tbody>
@@ -164,7 +226,7 @@
 						</tr>
 						<tr>
 							<th><b>Active Users</b></th>
-							<th><b>Tasks Focused On</b></th>
+							<th><b>Activities Description</b></th>
 						</tr>
 						<tr>
 							<td>User</td>
