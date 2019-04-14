@@ -21,7 +21,9 @@ var user_email=req.body.user_email;
 var user_password=req.body.user_password;
 var user_first_name=req.body.user_first_name;
 var user_last_name=req.body.user_last_name;
-//we need year, major ,and class, but they are radio and checkbox
+var major=req.body.M_choice;
+var year=req.body.Y_choice;
+var class=req.body.C_choice;
 var login_info="INSERT INTO login_table(user_name, user_email, user_password)VALUES('" + user_name + "','" + user_email + "','" + user_password +"') ON CONFLICT DO NOTHING;";
 var user_info="INSERT INTO user_table(first_name, last_name, major, year, classes, status)VALUES('" + user_first_name + "','" + user_last_name + "') ON CONFLICT DO NOTHING;";
 // the var user_info is uncompleted because we lack of year, major ,and class
