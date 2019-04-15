@@ -4,7 +4,7 @@ sudo -u postgres psql
 
 create database meetnwork_db;		
 
-\c database meetnwork_db;		/* connect to database */
+\c meetnwork_db;		/* connect to database */
 
 CREATE TABLE IF NOT EXISTS login_table (
   user_name VARCHAR(30) PRIMARY KEY,
@@ -32,6 +32,13 @@ CREATE TABLE IF NOT EXISTS user_table (
 	classes INT[],
 	status BOOLEAN NOT NULL,
 	user_name VARCHAR(30)
+);
+
+CREATE TABLE IF NOT EXISTS activity_table (
+	activity_id SERIAL PRIMARY KEY,
+	user INT,
+	Classes INT[],
+	Tasks VARCHAR(20)[]
 );
 
 INSERT INTO class_table(class_name, professor_name, enrolled_students)

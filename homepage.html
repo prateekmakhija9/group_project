@@ -9,6 +9,7 @@
 		<link rel='icon' href='https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Colorado_Buffaloes_logo.svg/1200px-Colorado_Buffaloes_logo.svg.png' type='image/x-icon'/>
 		<!--Bootstrap core CSS-->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">  
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="resources/css/my_style.css" rel="stylesheet" type=text/css>
 		<style>
 			h1 {background-color: #343A40}
@@ -41,11 +42,11 @@
 			</div>
 		</nav>
 
-		<div class="w2-row">
-			<div class="col-sm-2">
-				<div class="card">
-					<img class="card-img-top" src="https://www.manufacturingusa.com/sites/manufacturingusa.com/files/default.png" alt="" height="150px" width="150px">
-					<div class="row">
+	<div class="container">
+		<div class="row">
+			<div class="col-3">
+				<div class="card" id="profileSection">
+					<img class="card-img-top" src="https://www.manufacturingusa.com/sites/manufacturingusa.com/files/default.png" alt="" height="250px" width="150px">
 						<div class="container">
 							<table class="table table-bordered" id="profileTable">
 								<tr>
@@ -64,20 +65,116 @@
 						</div>
 						<div class="container" id="toDoContainer">
 							<tr>
-								<th><b>To Do</b></th>
+								<div class="form-group" id="toDoRow">
+									<th>To Do</th>
+									<button id="editButton" class="btn btn-sm btn-" style="font-size:24px" onclick="onClickFunction()"> <i class="fa">&#xf044;</i></button>
+								</div>
 							</tr>
-							<form action="/action_page.php" id="toDoList">
-								<input type="checkbox" name="task1" value="hw1"> Task 1<br>
-								<input type="checkbox" name="task2" value="hw2"> Task 2<br>
-							</form>
+							<div class="form-group">
+								<th>Class 1</th>
+								<input type="text" class="form-control" name="class1" placeholder="Class 1 Homework" maxlength="50" disabled onclick="onClickFunction()">
+							</div>
+							<div class="form-group">
+								<th>Class 2</th>
+								<input type="text" class="form-control" name="class2" placeholder="Class 2 Homework" maxlength="50" disabled onclick="onClickFunction()">
+							</div>
+							<div class="form-group">
+								<th>Class 3</th>
+								<input type="text" class="form-control" name="class3" placeholder="Class 3 Homework" maxlength="50" disabled onclick="onClickFunction()">
+							</div>
+							<div class="form-group">
+								<th>Class 4</th>
+								<input type="text" class="form-control" name="class4" placeholder="Class 4 Homework" maxlength="50" disabled onclick="onClickFunction()">
+							</div>
+
 						</div>
-					</div>
 				</div>
 			</div>
+			<div class="col-8">
+				<table class="table table-hover" id="class1TableMain">
+					<tbody>
+						<tr>
+							<br>
+							<h2>Class 1</h2>
+						</tr>
+						<tr>
+							<th><b>Active Users</b></th>
+							<th><b>Activities Description</b></th>
+						</tr>
+						<tr>
+							<td>User</td>
+							<td>Task(s) Description</td>
+						</tr>
+						<tr>
+							<td>User</td>
+							<td>Task(s) Description</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table table-hover" id="class2TableMain">
+					<tbody>
+						<tr>
+							<br>
+							<h2>Class 2</h2>
+						</tr>
+						<tr>
+							<th><b>Active Users</b></th>
+							<th><b>Activities Description</b></th>
+						</tr>
+						<tr>
+							<td>User</td>
+							<td>Task(s) Description</td>
+						</tr>
+						<tr>
+							<td>User</td>
+							<td>Task(s) Description</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table table-hover" id="class3TableMain">
+					<tbody>
+						<tr>
+							<br>
+							<h2>Class 3</h2>
+						</tr>
+						<tr>
+							<th><b>Active Users</b></th>
+							<th><b>Activities Description</b></th>
+						</tr>
+						<tr>
+							<td>User</td>
+							<td>Task(s) Description</td>
+						</tr>
+						<tr>
+							<td>User</td>
+							<td>Task(s) Description</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table table-hover" id="class4TableMain">
+					<tbody>
+						<tr>
+							<br>
+							<h2>Class 4</h2>
+						</tr>
+						<tr>
+							<th><b>Active Users</b></th>
+							<th><b>Tasks Focused On</b></th>
+						</tr>
+						<tr>
+							<td>User</td>
+							<td>Task(s) Description</td>
+						</tr>
+						<tr>
+							<td>User</td>
+							<td>Task(s) Description</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
-
-
-
+	</div>
+			
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 

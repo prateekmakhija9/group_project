@@ -1,0 +1,86 @@
+<% include ../partials/header %>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta name="description" content="">
+    <title>registration page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  </head>
+  <body>
+	<div class="container">
+	<form action="home">
+		<div class="form-group">
+			    <label> <strong>User Name </strong></label><br>
+					<input type="text" class="form-control" id="user_name" name="name" placeholder="Enter UserName">
+			</div>
+			<div class="form-group">
+			    <label> <strong>Email </strong></label><br>
+					<input type="text" class="form-control" id="user_email" name="email" placeholder="Enter Email">
+			</div>
+			<div class="form-group">
+			    <label> <strong>Password </strong></label><br>
+					<input type="password" class="form-control" id="user_password" name="password" placeholder="Enter Password">
+			</div>
+			<div class="form-group">
+			    <label> <strong> Enter The Password Again </strong></label><br>
+					<input type="password" class="form-control" id="user_confirm_password" name="confirm_password" placeholder="Enter Password Again">
+			</div>
+			<div class="form-group">
+			    <label> <strong> Enter The First Name </strong></label><br>
+					<input type="text" class="form-control" id="user_first_name" name="first_name" placeholder="Enter FirstName">
+			</div>
+			<div class="form-group">
+			    <label> <strong> Enter The Last Name </strong></label><br>
+					<input type="text" class="form-control" id="user_last_name" name="last_name" placeholder="Enter LastName">
+			</div>
+			<div class="form-group">
+			    <label class="form-check-label"> <strong> Choose the major </strong></label><br>
+					<div>
+					<input class="form-check-input" type="radio" id="CS" name="M_choice" value="1">computer science<br>
+					<input class="form-check-input" type="radio" id="ME" name="M_choice" value="2">mechanical engineering
+					</div>
+			</div>
+			<div class="form-group">
+			    <label class="form-check-label"> <strong> Choose the Year</strong></label><br>
+					<input class="form-check-input" type="radio" id="Freshman" name="G_choice" value="1">  Freshman<br>
+					<input class="form-check-input" type="radio" id="Sophomore" name="G_choice" value="2">  Sophomore<br>
+					<input class="form-check-input" type="radio" id="Junior" name="G_choice" value="3">  Junior<br>
+					<input class="form-check-input" type="radio" id="Senior" name="G_choice" value="4">  Senior
+			</div>
+			<div class="form-group">
+			    <label class="form-check-label"><strong> Choose the classes</strong></label><br>
+				     <input class="form-check-input" type="checkbox" id="SD" name="C_choice" value="1"> Software Development<br>
+					 <input class="form-check-input" type="checkbox" id="LA" name="C_choice" value="2"> Linear Algebra<br>
+					 <input class="form-check-input" type="checkbox" id="CT" name="C_choice" value="3"> Critical Thinking
+			</div>
+			
+			
+					<input type="submit" value="submit" class="btn btn-primary btn-block">
+				</form>
+				<br>
+			</div>
+		<%
+		function re_check(){
+		var username=document.getElementById('user_name').value;
+		var email=document.getElementById('user_email').value;
+		var password=document.getElementById('user_password').value;
+		var check_password=document.getElementById('user_confirm_password').value;
+		if(username==""||password==""||email==""){
+		alert("the username or password or email cannot be empty")
+		return false
+		}else if(password!=check_password){
+		alert("the password and confirm password must be same")
+		return false
+		}else{
+	
+		}
+		}
+		%>
+	</body>
+<% include ../partials/footer %>
