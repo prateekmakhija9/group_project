@@ -39,3 +39,15 @@ VALUES ('Software Development', 'Alan Paradise', ARRAY[]::integer[]),
 ('Linear Algebra', 'Rebecca Morrison', ARRAY[]::integer[]),
 ('Critical Thinking', 'Garrett Bredeson', ARRAY[]::integer[]);
 
+CREATE TABLE IF NOT EXISTS user_todos (
+	user_id SERIAL PRIMARY KEY,
+	classes INT[],
+	todos VARCHAR[]
+);
+
+INSERT INTO user_todos VALUES 
+(11, ARRAY[1,2], ARRAY['homework 3', 'problem set 2']);
+
+INSERT INTO user_table VALUES
+(11, 'Elizabeth', 'Robinson', 'CSCI', 3, ARRAY[1,2,3], CAST(1 AS BOOL), 'elro2540');
+
