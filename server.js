@@ -2,22 +2,12 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser'); 
 app.use(bodyParser.json());              
-app.use(bodyParser.urlencoded({ extended: true }));
 
-var pgp = require('pg-promise')();
-
-const dbConfig = {// this imformation is from lab7, and we need to add our own imformation
-	host: 'localhost',
-	port: 5432,
-	database: 'meetnwork_db',
-	user: 'postgres',
-	password: 'user'
-};
-// const dbConfig = process.env.DATABASE_URL; //can replace who dbConfig above with this
 
 var db = pgp(dbConfig);
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/'));
+
 
 // app.post('/register',function(req,res)){//the post of register page
 // 	var user_name=req.body.user_name;
